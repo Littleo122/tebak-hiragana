@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tebak Hiragana Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <div class="title">HIRAGANA QUIZ</div>
+    <div class="subtitle">Made by Sam</div>
+  </div>
+  
+  <div class="main-content">
+    <div class="quiz-container">
+      <!-- Menu Screen -->
+      <div class="menu-screen" id="menu-screen">
+        <h2 style="color: #0072ff; margin-bottom: 30px; font-family: 'Montserrat', sans-serif;">Choose Time Limit</h2>
+        <div class="time-options">
+          <button class="time-btn" onclick="startQuiz(3)">
+            <div class="time-value">3 Seconds</div>
+            <div class="time-desc">Fast Challenge</div>
+          </button>
+          <button class="time-btn" onclick="startQuiz(10)">
+            <div class="time-value">10 Seconds</div>
+            <div class="time-desc">Normal Mode</div>
+          </button>
+          <button class="time-btn" onclick="startQuiz(0)">
+            <div class="time-value">No Limit</div>
+            <div class="time-desc">Relaxed Mode</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div class="quiz-screen" id="quiz-screen" style="display: none;">
+        <div class="progress" id="progress">Question 1 / 46</div>
+        <div class="timer-container" id="timer-container" style="display: none;">
+          <div class="timer" id="timer">10</div>
+        </div>
+        <div class="hiragana-box" id="hiragana-char">あ</div>
+        <div class="options" id="options">
+          <!-- Buttons will be inserted here -->
+        </div>
+        <div class="result-message" id="result-message"></div>
+        <button class="submit-btn" id="submit-btn" disabled onclick="submitAnswer()">Submit</button>
+        <button class="back-btn" id="back-btn" onclick="backToMenu()">Back to Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
